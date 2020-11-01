@@ -27,11 +27,19 @@
 # 技术选型
 ## 1、框架
 - 前端：Bootstrap
+![image](https://github.com/YVictor13/studentAchievementManagementSystem/blob/main/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%87/bootstrap.png)
+
+<br>
 - 后端：Springboot
+
+![image](https://github.com/YVictor13/studentAchievementManagementSystem/blob/main/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%87/springboot.png)
+<br>
 ## 2、编程语言
 - 前端：HTML、CSS、JS
 - 后端：Java、SQL、XML、Mybatis
 - 前后端交互插件：Thymeleaf
+![image](https://github.com/YVictor13/studentAchievementManagementSystem/blob/main/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%87/thmeleaf.png)
+![image](https://github.com/YVictor13/studentAchievementManagementSystem/blob/main/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%87/mybatis.png)
 - 开发工具：IDEA-2020、Navicat Premium 15、Google
 - 运行环境：Windows 10 + Maven + JDK 11 + IE9以上
 # 系统设计
@@ -41,20 +49,28 @@
 - 学生：查询个人信息、查看成绩
 ## 数据库设计
 ### 1、成绩管理系统ER图
-
+![image](https://github.com/YVictor13/studentAchievementManagementSystem/blob/main/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%87/%E6%88%90%E7%BB%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9FER%E5%9B%BE.png)
 ### 2、学生-教师-管理员-课程
+![image](https://github.com/YVictor13/studentAchievementManagementSystem/blob/main/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%87/%E5%AD%A6%E7%94%9F-%E6%95%99%E5%B8%88-%E8%AF%BE%E7%A8%8BER%E5%9B%BE.png)
 
 ### 3、学生-教师-管理员-成绩
+![image](https://github.com/YVictor13/studentAchievementManagementSystem/blob/main/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%87/%E5%AD%A6%E7%94%9F-%E6%95%99%E5%B8%88-%E6%88%90%E7%BB%A9ER%E5%9B%BE.png)
 
 ## 2、数据字典
+![image](https://github.com/YVictor13/studentAchievementManagementSystem/blob/main/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%87/%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8.png)
 
 ## 3、系统设计
 ### 1、功能设计
+![image](https://github.com/YVictor13/studentAchievementManagementSystem/blob/main/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%87/%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1%E5%9B%BE.png)
 
 ### 2、用例设计
+![image](https://github.com/YVictor13/studentAchievementManagementSystem/blob/main/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%87/%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1%E5%9B%BE.png)
+
 # 系统界面
 - 登录
+![image](https://github.com/YVictor13/studentAchievementManagementSystem/blob/main/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%87/%E7%99%BB%E5%BD%95.png)
 
 - 首页
+![image](https://github.com/YVictor13/studentAchievementManagementSystem/blob/main/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%87/%E9%A6%96%E9%A1%B5.png)
 
 
