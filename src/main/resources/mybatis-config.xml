@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--1.配置环境 ，默认的环境id为mysql-->
+    <environments default="mysql">
+        <!--1.2.配置id为mysql的数据库环境 -->
+        <environment id="mysql">
+            <!-- 使用JDBC的事务管理 -->
+            <transactionManager type="JDBC"/>
+            <!--数据库连接池 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url"
+                          value="jdbc:mysql://localhost:3306/sam_system?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=GMT"/>
+                <property name="username" value="root"/>
+                <property name="password" value="168168"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--2.配置Mapper的位置 -->
+    <mappers>
+        <!--<mapper resource="mapping/BankMapper.xml"/>-->
+        <!-- 配置 dao 接口的位置，它有两种方式
+        第一种：使用 mapper 标签配置 class 属性
+        第二种：使用 package 标签，直接指定 mapper 接口所在的包
+        -->
+        <!--<mapper class="com.llb.dao.UserMapper"></mapper>-->
+        <!--<package name="org.example.mapper"/>-->
+<!--        <mapper resource="mapping/StudentInfoMapper.xml"/>-->
+<!--        <mapper resource="mapping/SignUpInfoMapper.xml"/>-->
+<!--        <mapper resource="mapping/ExamInfoMapper.xml"/>-->
+    </mappers>
+</configuration>

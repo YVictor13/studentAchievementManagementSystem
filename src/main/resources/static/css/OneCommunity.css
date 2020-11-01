@@ -1,0 +1,126 @@
+body {
+    /*background-color: #dddddd;*/
+    background-image: url("/images/timg.jpg");
+}
+
+.main {
+    margin: 30px;
+    background-color: white;
+}
+
+.btn-publish {
+    float: right;
+    margin-bottom: 20px;
+}
+
+#footer {
+    height: 29px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    line-height: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    font-family: Arial, serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.media-object {
+    width: 38px;
+    height: 38px;
+}
+
+.text-descripte {
+    font-size: 12px;
+    font-width: normal;
+    color: #999999;
+}
+
+.img-circle {
+    width: 30px;
+    height: 30px;
+}
+
+.img-avatar {
+    margin-top: 9px;
+}
+
+.profile .section {
+    margin-top: 15px;
+}
+
+.community-menu {
+    color: #c0c0c0;
+    font-size: 13px;
+}
+
+.jumbotron {
+    margin: 100px;
+    background-color: #dddddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.comment {
+    margin-bottom: 10px;
+}
+
+.comment-btn {
+    position: relative;
+    left: 90%;
+}
+
+.comment-sp {
+    margin-top: 0;
+}
+
+.comment-menu {
+    color: #999999;
+}
+
+.comment-menu .icon {
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.comment-menu .icon:hover {
+    color: #266fff;
+}
+
+.comment-bord {
+    border: 1px solid #eeeeee;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-radius: 4%;
+    margin-bottom: 10px;
+}
+
+.request-btn {
+    position: relative;
+    left: 80%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.tag-list:hover {
+    background-color: black;
+}
+
+#related {
+    text-decoration: none;
+}
+
+#related:hover {
+    color: #9acfea;
+    cursor: pointer;
+}

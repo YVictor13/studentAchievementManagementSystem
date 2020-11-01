@@ -1,0 +1,67 @@
+server:
+    port: 8080
+    servlet:
+        session:
+            timeout: 1800s
+    tomcat:
+        uri-encoding: UTF-8
+spring:
+    profiles:
+        active: dev
+    servlet:
+        multipart:
+            enabled: true
+            max-file-size: 5MB
+    mvc:
+        static-path-pattern: static/**
+    thymeleaf:
+        cache: false
+    devtools:
+        restart:
+            enabled: true #设置
+            additional-paths: src/main/java #重启目录
+            additional-exclude: static/**,public/** #设置当改动文件资源的时候，进行系统进行从新启动
+            exclude: WEB-INF/**
+    freemarker:
+        cache: false
+
+mybatis:
+    configuration:
+        map-underscore-to-camel-case: true
+    type-aliases-package: com/example/demo/model
+    mapper-locations: classpath:mapping/*.xml
+
+---
+
+spring:
+    profiles: dev
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/sam_system?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+        username: root
+        password: 168168
+---
+
+spring:
+    profiles: online
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/exam_management?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+        username: root
+        password: cyk.0317
+
+    #    设置freemarker
+    freemarker:
+        allow-request-override: false
+        #    开发过程建议关闭缓存
+        cache: true
+        check-template-location: false
+        charset: utf-8
+        content-type: text/html;charset=utf-8
+        expose-request-attributes: false
+        expose-session-attributes: false
+        expose-spring-macro-helpers: false
+        request-context-attribute:
+        # 默认后缀就是.ftl
+        suffix: .ftl
+        template-loader-path: classPath:/fileTemplate

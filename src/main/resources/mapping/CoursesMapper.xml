@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.CoursesMapper" >
+  <resultMap id="BaseResultMap" type="com.example.demo.model.Courses" >
+    <id column="courseId" property="courseid" jdbcType="VARCHAR" />
+    <result column="collegeId" property="collegeid" jdbcType="VARCHAR" />
+    <result column="majorId" property="majorid" jdbcType="VARCHAR" />
+    <result column="courseName" property="coursename" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    courseId, collegeId, majorId, courseName
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from courses
+    where courseId = #{courseid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from courses
+    where courseId = #{courseid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.model.Courses" >
+    insert into courses (courseId, collegeId, majorId, 
+      courseName)
+    values (#{courseid,jdbcType=VARCHAR}, #{collegeid,jdbcType=VARCHAR}, #{majorid,jdbcType=VARCHAR}, 
+      #{coursename,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.model.Courses" >
+    insert into courses
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="courseid != null" >
+        courseId,
+      </if>
+      <if test="collegeid != null" >
+        collegeId,
+      </if>
+      <if test="majorid != null" >
+        majorId,
+      </if>
+      <if test="coursename != null" >
+        courseName,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="courseid != null" >
+        #{courseid,jdbcType=VARCHAR},
+      </if>
+      <if test="collegeid != null" >
+        #{collegeid,jdbcType=VARCHAR},
+      </if>
+      <if test="majorid != null" >
+        #{majorid,jdbcType=VARCHAR},
+      </if>
+      <if test="coursename != null" >
+        #{coursename,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.model.Courses" >
+    update courses
+    <set >
+      <if test="collegeid != null" >
+        collegeId = #{collegeid,jdbcType=VARCHAR},
+      </if>
+      <if test="majorid != null" >
+        majorId = #{majorid,jdbcType=VARCHAR},
+      </if>
+      <if test="coursename != null" >
+        courseName = #{coursename,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where courseId = #{courseid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.model.Courses" >
+    update courses
+    set collegeId = #{collegeid,jdbcType=VARCHAR},
+      majorId = #{majorid,jdbcType=VARCHAR},
+      courseName = #{coursename,jdbcType=VARCHAR}
+    where courseId = #{courseid,jdbcType=VARCHAR}
+  </update>
+</mapper>
